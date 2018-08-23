@@ -34,7 +34,7 @@ namespace IdealFinantial
 
             services.AddCancellationToken();
 
-            services.AddDal();
+            services.AddDal(Configuration);
 
             services.AddServices();
 
