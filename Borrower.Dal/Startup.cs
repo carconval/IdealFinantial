@@ -7,12 +7,7 @@ namespace Borrower.Dal
     {
         public static void AddDal(this IServiceCollection services, IConfiguration config)
         {
-            var section = config.GetSection("BorrowerDbSettings");
-            services.Configure<BorrowerDbSettings>(options =>
-            {
-                options.ConnectionString = section["ConnectionString"];
-                options.Database = section["Database"];
-            });
+            services.Configure<BorrowerDbSettings>(config.GetSection(nameof(BorrowerDbSettings)));
             services.AddScoped<BorrowerContext, BorrowerContext>();
         }
     }
