@@ -1,0 +1,12 @@
+<nav id="borrower-nav-bar" class="navbar  navbar-fixed-top" [ngClass]="{'navbar-inverse':!inFormMode}">
+  <div class="container">
+    <div class="navbar-header" [hidden]="inFormMode">
+      <span class="navbar-brand">Home</span>
+    </div>
+    <div class="navbar-header" [hidden]="!inFormMode">
+      
+      <span class="navbar-brand"><button type="button" class="close" aria-label="Close" (click)="formCanceled.emit()"><span aria-hidden="true">&times;</span></button></span>
+      <span class="navbar-brand">Make a draw</span>
+    </div>
+  </div>
+</nav>

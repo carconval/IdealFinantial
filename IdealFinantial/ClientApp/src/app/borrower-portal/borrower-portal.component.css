@@ -1,0 +1,8 @@
+#borrower-data span {
+  font-size: 140%;
+  display: block;
+}
+#borrower-data small {
+  font-size: 60%;
+  display: block;
+}

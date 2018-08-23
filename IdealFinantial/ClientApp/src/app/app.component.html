@@ -1,0 +1,5 @@
+<app-nav-bar [inFormMode]="inFormMode" (formCanceled)="inFormMode=false"></app-nav-bar>
+
+<div id="main-container" class="container">
+  <app-borrower-portal (formEnabled)="inFormMode=$event" [inFormMode]="inFormMode"></app-borrower-portal>
+</div>

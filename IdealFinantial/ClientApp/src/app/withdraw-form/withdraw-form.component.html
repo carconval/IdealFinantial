@@ -1,0 +1,9 @@
+<form novalidate [formGroup]="myForm" (ngSubmit)="makeWithdraw()">
+  <div class="form-group form-group-sm" [ngClass]="{'has-danger': amountCtrl.invalid && (amountCtrl.dirty || amountCtrl.touched),'has-success': amountCtrl.valid && (amountCtrl.dirty || amountCtrl.touched)}">
+    <label for="withdraw-amount" class="control-label small">Amount:</label>
+    <input type="number" class="form-control" id="withdraw-amount" formControlName="amount" required />
+  </div>
+  <div class="text-right">
+    <button type="submit" class="btn btn-primary btn-sm">SUBMIT</button>
+  </div>
+</form>
